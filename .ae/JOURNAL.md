@@ -1,6 +1,7 @@
 # Journal
 
-## [2026-03-20] Session Start: Ae Initialization
-- Initialized Project Spec, Roadmap, and State.
-- Defined 5 Phases for V1 development.
-- Confirmed use of pure TOML and Markdown as the stack.
+## [2026-03-20] Phase 1 Completion: Core Foundation
+- Completed GEMINI.md and all 12 slash command definitions.
+- Launched `create-ae@1.0.1` npx installer for rapid project initialization.
+- Marked Phase 1 as complete in ROADMAP.md.
+- Transitioned project state to Phase 2: Build Loop.

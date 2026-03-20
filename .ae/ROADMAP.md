@@ -1,9 +1,9 @@
 # Roadmap
 
-## Phase 1: Core Foundation — [ ] pending
-- [ ] Initialize `GEMINI.md` constitution
-- [ ] Implement `/ae:new-project` command definition
-- [ ] Implement `/ae:progress` command definition
+## Phase 1: Core Foundation — [x] complete
+- [x] Initialize `GEMINI.md` constitution
+- [x] Implement `/ae:new-project` command definition
+- [x] Implement `/ae:progress` command definition
 
 ## Phase 2: Build Loop — [ ] pending
 - [ ] Implement `/ae:discuss` command definition

@@ -1,5 +1,5 @@
 # State
-last_command: /ae:new-project
-current_phase: 1
+last_command: /ae:progress
+current_phase: 2
 phase_status: not started
 blockers: none

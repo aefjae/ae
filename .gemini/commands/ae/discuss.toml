@@ -1,0 +1,30 @@
+description = "Clarify gray areas for a phase before planning. Usage: /ae:discuss 1"
+
+prompt = """
+You are clarifying Phase {{args}} of the Ae project before writing a plan.
+
+Read these files first:
+- .ae/SPEC.md
+- .ae/ROADMAP.md
+- .ae/STATE.md
+
+Then identify 3-5 specific gray areas or ambiguous decisions in Phase {{args}} that could derail execution if left unclear. Ask the user about each one, wait for answers.
+
+After all answers, write .ae/.planning/phase-{{args}}/CONTEXT.md:
+---
+# Phase {{args}} Context
+## Gray Areas Resolved
+### [Question 1]
+Answer: ...
+### [Question 2]
+Answer: ...
+## Decisions Made
+## Ready for planning: YES
+---
+
+Update .ae/STATE.md:
+- last_command: /ae:discuss {{args}}
+- phase_status: discussed, ready to plan
+
+Tell the user: Context captured. Run /ae:plan {{args}} to write the task plan.
+"""

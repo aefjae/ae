@@ -1,0 +1,18 @@
+description = "Show current project state and where you are in the build."
+
+prompt = """
+Read all of these files:
+- .ae/SPEC.md
+- .ae/ROADMAP.md
+- .ae/STATE.md
+- .ae/JOURNAL.md
+
+Then give a concise status report:
+1. Project name and one-line summary
+2. Current phase and its status
+3. What was last done
+4. What to run next
+5. Any blockers
+
+Keep it under 15 lines. Be direct.
+"""

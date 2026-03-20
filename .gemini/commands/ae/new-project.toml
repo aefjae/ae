@@ -1,0 +1,50 @@
+description = "Start a new project under Ae. Interviews you, then writes SPEC.md, ROADMAP.md, and STATE.md."
+
+prompt = """
+You are starting a new Ae-managed project. The user's project root is the current working directory.
+
+Read the current GEMINI.md to understand Ae rules.
+
+Then interview the user with these questions one at a time — wait for answers before continuing:
+1. What is this project? (one sentence)
+2. Who is it for? (yourself, a specific user, public)
+3. What problem does it solve?
+4. What are the must-have features for v1?
+5. What are explicitly OUT of scope for v1?
+6. What's the stack? (language, framework, hosting)
+7. Break v1 into 3–5 phases. What's each phase responsible for?
+
+After all answers are collected:
+
+Write `.ae/SPEC.md` with this structure:
+```
+# Project Spec
+status: FINALIZED
+
+## Summary
+## Problem
+## Target User
+## V1 Features (in scope)
+## Out of Scope
+## Stack
+```
+
+Write `.ae/ROADMAP.md` with this structure:
+```
+# Roadmap
+## Phase 1: [name] — [ ] pending
+## Phase 2: [name] — [ ] pending
+...
+```
+
+Write `.ae/STATE.md` with this structure:
+```
+# State
+last_command: /ae:new-project
+current_phase: 1
+phase_status: not started
+blockers: none
+```
+
+Confirm to the user: "Ae initialized. Run /ae:discuss 1 to start Phase 1."
+"""

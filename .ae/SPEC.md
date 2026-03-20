@@ -24,6 +24,14 @@ Solo developers who use Gemini CLI and want a more structured, persistent develo
 - `/ae:map`: Analyze existing codebases.
 - `/ae:review`: Post-execution code review.
 
+## V2 Features (in scope)
+- `/ae:resume`: Restore project state from a saved checkpoint.
+- `/ae:checkpoint`: Save the current project state (including uncommitted changes) to a snapshot.
+- `/ae:versions`: Check environment and dependency versions before implementation.
+- `/ae:commit`: Create a formatted atomic commit for the current task.
+- `/ae:do`: Execute a specific task with automatic loop detection and progress tracking.
+- `/ae:milestone`: Mark a significant project milestone and archive the current state.
+
 ## Out of Scope
 - GUI or web dashboard.
 - Multi-user support or cloud sync.

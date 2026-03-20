@@ -14,14 +14,14 @@ Ae is distributed via Git. To use it in your project:
    ```bash
    git clone https://github.com/aefjae/ae .ae_temp && mv .ae_temp/.gemini . && rm -rf .ae_temp
    ```
-2. Ensure you have the [Gemini CLI](https://github.com/google/gemini-cli) installed and configured.
+2. Run `/ae:new-project` in Gemini CLI to initialize the `.ae/` directory and `GEMINI.md` constitution.
 
 ## 🏗 The Build Flow
 Ae follows a strict lifecycle for every feature or phase:
 
 1.  **Research** (`/ae:research`): Gather context and investigate.
 2.  **Initialize** (`/ae:new-project`): Define the Spec and Roadmap.
-3.  **Discuss** (`/ae:discuss`): Refine requirements for the current phase.
+3.  **Discuss** (`/ae:discuss`): Clarify gray areas for a phase before planning.
 4.  **Plan** (`/ae:plan`): Create a step-by-step implementation plan.
 5.  **Execute** (`/ae:execute`): AI implements the planned changes.
 6.  **Verify** (`/ae:verify`): Test and validate the implementation.
@@ -33,7 +33,7 @@ Ae follows a strict lifecycle for every feature or phase:
 | Command | Description |
 | :--- | :--- |
 | `/ae:new-project` | Initialize a new project with Ae structure (`SPEC.md`, `ROADMAP.md`, etc.). |
-| `/ae:discuss` | Research and discuss requirements for the current phase. |
+| `/ae:discuss` | Clarify gray areas for a phase before planning. |
 | `/ae:plan` | Create detailed implementation plans for the current phase. |
 | `/ae:execute` | Implement planned changes autonomously. |
 | `/ae:verify` | Test and validate implementation against the plan. |

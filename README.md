@@ -8,11 +8,11 @@ AI coding tools often lack long-term memory of a project’s lifecycle. **Ae** f
 No runtime dependencies. No Node packages. No install scripts. Just pure intelligence and structured documentation.
 
 ## 🛠 Installation
-Ae is distributed via Git. To use it in your project:
+To initialize Ae in your project:
 
-1. Clone this repository into your project's root:
+1. Run the following command in your project's root:
    ```bash
-   git clone https://github.com/aefjae/ae .ae_temp && mv .ae_temp/.gemini . && rm -rf .ae_temp
+   npx create-ae
    ```
 2. Run `/ae:new-project` in Gemini CLI to initialize the `.ae/` directory and `GEMINI.md` constitution.
 

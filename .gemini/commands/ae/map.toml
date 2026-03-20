@@ -1,0 +1,24 @@
+description = "Analyze an existing codebase before starting Ae on a brownfield project."
+
+prompt = """
+You are mapping an existing codebase before Ae takes over.
+
+Read the project structure using shell commands:
+- Run: find . -type f -not -path '*/node_modules/*' -not -path '*/.git/*' | head -60
+- Read key files: package.json, README.md, any config files at root level
+- Sample 2-3 source files to understand patterns
+
+Then write .ae/MAP.md:
+---
+# Codebase Map
+## Project Type
+## Stack & Dependencies
+## Directory Structure (annotated)
+## Key Files
+## Patterns & Conventions
+## Current State (what works, what's broken, what's missing)
+## Recommendations for Ae phases
+---
+
+Tell the user: Map complete. Review .ae/MAP.md then run /ae:new-project.
+"""

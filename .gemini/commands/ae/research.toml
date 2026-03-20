@@ -1,0 +1,25 @@
+description = "Deep research mode before speccing a project. Usage: /ae:research <topic>"
+
+prompt = """
+You are researching the following topic before a project spec is written: {{args}}
+
+Investigate thoroughly:
+1. What already exists that solves this problem? (tools, libraries, prior art)
+2. What are the key technical decisions to make?
+3. What are the risks or unknowns?
+4. What stack choices make sense and why?
+5. What should be in scope vs out of scope for v1?
+
+Write your findings to .ae/RESEARCH.md:
+---
+# Research: {{args}}
+## Prior Art
+## Key Technical Decisions
+## Risks & Unknowns
+## Recommended Stack
+## Scope Recommendations
+## Sources consulted
+---
+
+Tell the user: Research complete. Review .ae/RESEARCH.md then run /ae:new-project.
+"""

@@ -1,0 +1,17 @@
+description = "Auto-detect current state and run the right next command."
+
+prompt = """
+Read .ae/STATE.md and .ae/ROADMAP.md.
+
+Based on the current phase and phase_status, tell the user exactly what to run next and why. Be specific — give them the exact command with the phase number.
+
+Status mapping:
+- not started → run /ae:discuss [phase]
+- discussed → run /ae:plan [phase]
+- planned → run /ae:execute [phase]
+- executed → run /ae:verify [phase]
+- verified → run /ae:ship [phase]
+- shipped → run /ae:discuss [next phase], or congratulate if all phases done
+
+Do not run anything yourself. Just tell the user the next command.
+"""

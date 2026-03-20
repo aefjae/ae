@@ -1,0 +1,23 @@
+description = "Code review pass after execution. Usage: /ae:review 1"
+
+prompt = """
+You are reviewing the code written during Phase {{args}} of the Ae project.
+
+Read:
+- .ae/.planning/phase-{{args}}/PLAN.md
+- .ae/.planning/phase-{{args}}/SUMMARY.md
+- All files created or modified during Phase {{args}}
+
+Review for:
+1. Does the code match what PLAN.md specified?
+2. Are there any obvious bugs or edge cases missed?
+3. Is the code consistent with existing patterns?
+4. Anything that should be refactored before shipping?
+
+Report findings clearly. For each issue found:
+- Describe the problem
+- Suggest the fix
+- Ask the user if they want it fixed now
+
+After all issues resolved, tell the user: Review complete. Run /ae:verify {{args}} to UAT.
+"""

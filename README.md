@@ -5,6 +5,12 @@ Ae is a development framework designed specifically for **Gemini CLI**, enabling
 ## 🚀 The Core Idea
 AI coding tools often lack long-term memory of a project’s lifecycle. **Ae** fixes this by introducing a spec-driven workflow where every decision, phase, and state is tracked in persistent Markdown and TOML files.
 
+**Ae v2** is specifically designed to overcome Gemini's inherent limitations:
+- **Task Offloading:** Prevents the AI from handing tasks back to you with "you should do X."
+- **Silent Loops:** Detects and stops repetitive, unsuccessful logic attempts.
+- **Outdated Packages:** Verifies environment and dependency versions before coding.
+- **Session Fragmentation:** Maintains precise context and state across long-duration tasks.
+
 No runtime dependencies. No Node packages. No install scripts. Just pure intelligence and structured documentation.
 
 ## 🛠 Installation
@@ -44,6 +50,12 @@ Ae follows a strict lifecycle for every feature or phase:
 | `/ae:research` | Conduct deep research or investigation before speccing. |
 | `/ae:map` | Analyze an existing codebase to generate architectural context. |
 | `/ae:review` | Perform a post-execution code review to ensure quality. |
+| `/ae:checkpoint` | Save current project state (including uncommitted changes) to a snapshot. |
+| `/ae:resume` | Restore project state from a saved checkpoint. |
+| `/ae:versions` | Check environment and dependency versions before implementation. |
+| `/ae:commit` | Create a formatted atomic git commit for the current task. |
+| `/ae:do` | Execute a specific task with automatic loop detection and progress tracking. |
+| `/ae:milestone` | Mark a significant project milestone and archive the current state. |
 
 ## 📁 Project Structure
 When initialized, Ae maintains your project state in the `.ae/` directory:

@@ -14,3 +14,6 @@
 - Implemented `/ae:checkpoint`, `/ae:resume`, `/ae:versions`, `/ae:commit`, `/ae:do`, and `/ae:milestone` command definitions.
 - Updated SPEC.md with V2 features.
 - Marked Phase 2 as complete in ROADMAP.md.
+
+## [2026-03-20] Documentation Upgrade
+- Updated README.md with Ae v2 command references and notes on addressing Gemini's weaknesses.

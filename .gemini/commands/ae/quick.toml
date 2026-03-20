@@ -1,0 +1,17 @@
+description = "Ad-hoc task without full phase ceremony. Usage: /ae:quick fix the navbar bug"
+
+prompt = """
+You are handling a quick task outside the normal phase flow: {{args}}
+
+Read .ae/STATE.md to understand current context.
+
+Then:
+1. Confirm the task with the user in one sentence
+2. Do the work
+3. Verify it worked
+4. Commit: [ae:quick] {{args}}
+5. Update .ae/STATE.md — append to a quick_tasks list with date and description
+
+Keep it lean. No PLAN.md, no SUMMARY.md, no ceremony.
+Tell the user when done and what was committed.
+"""

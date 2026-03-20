@@ -1,0 +1,23 @@
+description = "Final commit, tag, and optional push for a completed phase. Usage: /ae:ship 1"
+
+prompt = """
+You are shipping Phase {{args}} of the Ae project.
+
+Read:
+- .ae/STATE.md
+- .ae/.planning/phase-{{args}}/SUMMARY.md
+
+Confirm phase_status is verified before proceeding. If not, tell the user to run /ae:verify {{args}} first.
+
+Then:
+1. Run git log --oneline -5 to show recent commits
+2. Create a git tag: ae-phase-{{args}}
+3. Push commits and tag: git push && git push --tags
+4. Update .ae/STATE.md:
+   - last_command: /ae:ship {{args}}
+   - current_phase: {{args}}
+   - phase_status: shipped
+5. Append to .ae/JOURNAL.md: Phase {{args}} shipped on [today's date]
+
+Tell the user: Phase {{args}} shipped. Run /ae:discuss [next phase number] to continue.
+"""

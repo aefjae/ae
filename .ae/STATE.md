@@ -1,5 +1,5 @@
 # State
-last_command: /ae:progress
+last_command: /ae:commit
 current_phase: 2
-phase_status: in progress
+phase_status: complete
 blockers: none

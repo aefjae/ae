@@ -5,14 +5,14 @@
 - [x] Implement `/ae:new-project` command definition
 - [x] Implement `/ae:progress` command definition
 
-## Phase 2: Ae v2 Build Loop — [ ] in progress
+## Phase 2: Ae v2 Build Loop — [x] complete
 - [x] Upgrade GEMINI.md with anti-patterns and loop detection rules
-- [ ] Implement `/ae:resume` command definition
-- [ ] Implement `/ae:checkpoint` command definition
-- [ ] Implement `/ae:versions` command definition
-- [ ] Implement `/ae:commit` command definition
-- [ ] Implement `/ae:do` command definition
-- [ ] Implement `/ae:milestone` command definition
+- [x] Implement `/ae:resume` command definition
+- [x] Implement `/ae:checkpoint` command definition
+- [x] Implement `/ae:versions` command definition
+- [x] Implement `/ae:commit` command definition
+- [x] Implement `/ae:do` command definition
+- [x] Implement `/ae:milestone` command definition
 
 ## Phase 3: Quality Loop — [ ] pending
 - [ ] Implement `/ae:verify` command definition

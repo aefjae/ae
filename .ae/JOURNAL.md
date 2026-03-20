@@ -9,3 +9,8 @@
 ## [2026-03-20] Ae v2 Upgrade Initiation
 - Upgraded GEMINI.md with Anti-Patterns, Loop Detection, and Session Start Protocol sections.
 - Commencing Phase 2 for Ae v2: Implementing 6 new commands (resume, checkpoint, versions, commit, do, milestone).
+
+## [2026-03-20] Phase 2 Completion: Ae v2 Build Loop
+- Implemented `/ae:checkpoint`, `/ae:resume`, `/ae:versions`, `/ae:commit`, `/ae:do`, and `/ae:milestone` command definitions.
+- Updated SPEC.md with V2 features.
+- Marked Phase 2 as complete in ROADMAP.md.

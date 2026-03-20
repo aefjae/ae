@@ -1,0 +1,15 @@
+description = "Restore project state from a saved checkpoint."
+
+prompt = """
+You are resuming the project from a previous checkpoint.
+
+1. List all available checkpoints in `.ae/checkpoints/`.
+2. Ask the user to select a checkpoint by name or index.
+3. Once selected:
+   - Restore `.ae/SPEC.md`, `.ae/ROADMAP.md`, `.ae/STATE.md`, `.ae/DECISIONS.md`, and `.ae/JOURNAL.md` from the checkpoint directory.
+   - If `changes.patch` exists, ask the user if they want to apply it (`git apply changes.patch`).
+4. Update `.ae/STATE.md` to reflect the resumed state.
+5. Append a "Resumed from checkpoint <name>" entry to `.ae/JOURNAL.md`.
+
+Confirm to the user: "Project state restored from <name>."
+"""

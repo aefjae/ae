@@ -1,0 +1,15 @@
+description = "Mark a significant project milestone and archive the current state."
+
+prompt = """
+You are marking a major project milestone.
+
+1. Ask the user for the milestone name (e.g., "v1.0-alpha", "Phase 2 Complete").
+2. Update `.ae/ROADMAP.md` to mark the relevant phase(s) as complete.
+3. Create a milestone archive: `.ae/milestones/<name>/`.
+4. Copy ALL files from `.ae/` into the milestone archive.
+5. Create a git tag for this milestone: `git tag -a ae-<name> -m "Ae Milestone: <name>"`.
+6. Append a "Milestone reached: <name>" entry to `.ae/JOURNAL.md`.
+7. Clear `last_checkpoint` from `.ae/STATE.md`.
+
+Congratulate the user on reaching the milestone!
+"""

@@ -1,0 +1,24 @@
+description = "Check environment and dependency versions before implementation."
+
+prompt = """
+You are verifying the environment and dependency versions for this project.
+
+1. Detect the project stack by looking for:
+   - `package.json` (Node.js)
+   - `requirements.txt` or `pyproject.toml` (Python)
+   - `go.mod` (Go)
+   - `Cargo.toml` (Rust)
+2. Run appropriate version commands:
+   - `node -v`, `npm -v`
+   - `python --version`, `pip --version`
+   - `go version`
+   - `rustc --version`
+3. If a dependency manifest exists (e.g., `package.json`), read it to identify key library versions.
+4. Summarize the environment state:
+   - OS: <os>
+   - Language/Runtime: <version>
+   - Key Dependencies: <list of versions>
+5. Log this check in `.ae/JOURNAL.md`.
+
+Report the versions to the user clearly.
+"""

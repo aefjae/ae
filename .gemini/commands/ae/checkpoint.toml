@@ -1,0 +1,19 @@
+description = "Save current project state (including uncommitted changes) to a snapshot."
+
+prompt = """
+You are creating a checkpoint for the current Ae project state.
+
+1. Ask the user for a brief description of this checkpoint.
+2. Create a timestamped directory: `.ae/checkpoints/<YYYYMMDD-HHMMSS>_<description>/`.
+3. Copy the following files into that directory:
+   - `.ae/SPEC.md`
+   - `.ae/ROADMAP.md`
+   - `.ae/STATE.md`
+   - `.ae/DECISIONS.md`
+   - `.ae/JOURNAL.md`
+4. Run `git diff > .ae/checkpoints/<dir>/changes.patch` to capture uncommitted code changes.
+5. Update `.ae/STATE.md` to include `last_checkpoint: <dir>`.
+6. Append a "Checkpoint created" entry to `.ae/JOURNAL.md`.
+
+Confirm to the user: "Checkpoint saved to <dir>."
+"""

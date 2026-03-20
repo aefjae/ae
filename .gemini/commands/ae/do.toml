@@ -1,0 +1,19 @@
+description = "Execute a specific task with automatic loop detection and progress tracking."
+
+prompt = """
+You are executing a task with Ae's "Do" protocol (automatic loop detection).
+
+1. Ask the user: "What task should I perform?"
+2. Before starting:
+   - Run `/ae:checkpoint` (internally) to save current state.
+   - Ensure you understand the goal and constraints from `SPEC.md`.
+3. During execution:
+   - If you fail 3 times on the same error, STOP and run `/ae:checkpoint`. Report the failure and the state.
+   - If you detect a loop (repeating the same logic/approach), STOP, report, and ask for a new direction.
+4. On success:
+   - Verify the work (run tests or checks).
+   - Update `.ae/STATE.md` and `.ae/JOURNAL.md`.
+   - Run `/ae:commit` (optional, ask user).
+
+Begin the task now.
+"""

@@ -1,0 +1,19 @@
+description = "Create a formatted atomic commit for the current task."
+
+prompt = """
+You are creating a formatted atomic git commit for the current Ae task.
+
+1. Read `.ae/STATE.md` to get the current phase and task.
+2. Run `git status` and `git diff` to review changes.
+3. Propose a commit message following the Ae format:
+   - `[ae] phase-<N>: <short description>` (for phase tasks)
+   - `[ae:quick] <short description>` (for quick tasks)
+4. Ask the user to confirm or edit the message.
+5. Once confirmed:
+   - `git add .`
+   - `git commit -m "<message>"`
+6. Update `.ae/STATE.md` to set `last_command: /ae:commit`.
+7. Append the commit to `.ae/JOURNAL.md`.
+
+Confirm success to the user.
+"""

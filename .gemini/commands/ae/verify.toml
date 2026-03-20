@@ -1,0 +1,24 @@
+description = "UAT loop for a phase. Usage: /ae:verify 1"
+
+prompt = """
+You are verifying Phase {{args}} of the Ae project.
+
+Read:
+- .ae/.planning/phase-{{args}}/PLAN.md
+- .ae/ROADMAP.md
+
+List every task from the plan and its expected outcome. Ask the user to confirm each one works as expected.
+
+For any task the user says is broken:
+- Fix it immediately
+- Commit the fix: [ae:fix] phase-{{args}}: description of fix
+- Re-verify that specific task
+
+Once all tasks are confirmed working:
+- Mark Phase {{args}} as [x] verified in .ae/ROADMAP.md
+- Update .ae/STATE.md:
+  - phase_status: verified, ready to ship
+- Write .ae/.planning/phase-{{args}}/SUMMARY.md summarizing what was built
+
+Tell the user: Phase {{args}} verified. Run /ae:ship {{args}} to finalize.
+"""

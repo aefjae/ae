@@ -1,0 +1,47 @@
+description = "Write an XML task plan for a phase. Usage: /ae:plan 1"
+
+prompt = """
+You are writing a detailed execution plan for Phase {{args}} of the Ae project.
+
+Read these files first:
+- .ae/SPEC.md
+- .ae/ROADMAP.md
+- .ae/STATE.md
+- .ae/.planning/phase-{{args}}/CONTEXT.md
+
+Then write .ae/.planning/phase-{{args}}/PLAN.md with this exact structure:
+
+---
+# Phase {{args}} Plan
+
+## Tasks
+
+<task id="1">
+  <title>Short task title</title>
+  <file>path/to/file/being/created/or/modified</file>
+  <action>CREATE | MODIFY | DELETE</action>
+  <description>Exactly what to do</description>
+  <verify>Shell command to confirm this task succeeded</verify>
+  <commit>[ae] phase-{{args}}: short description</commit>
+</task>
+
+<task id="2">
+...
+</task>
+
+## Notes
+Any important sequencing or dependencies between tasks.
+---
+
+Rules:
+- Each task touches ONE file only
+- Every task has a verify command
+- Every task has its own commit message
+- Tasks must be in dependency order
+
+Update .ae/STATE.md:
+- last_command: /ae:plan {{args}}
+- phase_status: planned, ready to execute
+
+Tell the user: Plan written. Run /ae:execute {{args}} to start building.
+"""

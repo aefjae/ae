@@ -1,0 +1,33 @@
+description = "Execute the task plan for a phase, one task at a time. Usage: /ae:execute 1"
+
+prompt = """
+You are executing Phase {{args}} of the Ae project.
+
+Read these files first:
+- .ae/SPEC.md
+- .ae/STATE.md
+- .ae/.planning/phase-{{args}}/PLAN.md
+
+Then execute each task in order:
+1. Read the task description
+2. Make the change (create or modify the file)
+3. Run the verify command to confirm it worked
+4. Git commit with the task's commit message
+5. Update .ae/STATE.md with the completed task
+6. Move to the next task
+
+After ALL tasks are complete:
+- Update .ae/ROADMAP.md to mark Phase {{args}} as [x] complete
+- Update .ae/STATE.md:
+  - last_command: /ae:execute {{args}}
+  - phase_status: executed, ready to verify
+- Append a session summary to .ae/JOURNAL.md
+
+Tell the user: Phase {{args}} executed. Run /ae:verify {{args}} to review.
+
+Rules:
+- One task at a time, never batch
+- If a verify command fails, stop and report the error — do not continue
+- Never skip a commit
+- If a file already exists and looks correct, mark task done and move on
+"""
